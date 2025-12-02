@@ -3,7 +3,9 @@
 /* ページスタイル */
 body {
     font-family: "Noto Serif JP", serif;
+    font-optical-sizing: auto;
     font-weight: 400;
+    font-style: normal;
     /* line-height: 1.75; */
     color: #333;
 }
@@ -25,6 +27,7 @@ img {
         margin-left: auto;
     }
 }
+
 
 ul {
     list-style: none;
@@ -62,7 +65,7 @@ ul {
     display: flex;
 }
 
-/* sextion */
+/* section */
 
 .section__title {
     font-weight: bold;
@@ -90,14 +93,17 @@ ul {
 }
 
 .section__bottom {
+    margin-inline: 1rem;
+    margin-top: 9.8rem;
+    margin-bottom: 3.15rem;
     display: flex;
     align-items: center;
     text-align: center;
     flex-direction: column;
-    row-gap: 1.25rem;
-    line-height: 1.78;
-    padding-top: 2.4rem;
-    padding-bottom: 2.5rem;
+    row-gap: 1rem;
+    line-height: 1.5;
+    padding-top: 1rem;
+    padding-bottom: 2.1rem;
     background-color: #F0F4FF;
 }
 
@@ -125,27 +131,40 @@ ul {
 }
 
 .section__name {
+    padding-top: .3rem;
+    padding-left: .15rem;
     font-size: 1.125rem;
     font-weight: 600;
+    letter-spacing: .1em;
 }
 
-.sectinon__tax {
-    font-size: 0.875rem;
+.section__tax {
+    padding-top: .1rem;
+    padding-left: .5rem;
+    padding-right: .4rem;
+    font-size: .875rem;
+    letter-spacing: .06em;
 }
+
+.section__fee {
+    padding-left: .1rem;
+    letter-spacing: .1em;
+}
+
+/* button */
 
 .section__button {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    row-gap: 1.25rem;
+    row-gap: 1rem;
 }
-
-/* button */
 
 .button {
     /* max-width: 18.75rem; */
-    padding: .7rem 3rem;
+    padding: .99rem 3.8rem;
+    margin-top: .2rem;
     color: #fff;
     border-radius: 2.0625rem;
     /* display: inline-flex; */
@@ -161,16 +180,17 @@ ul {
 }
 
 .button__lightblue {
+    margin-left: .05rem;
     background-color: #46C4DB;
 }
 
 @media (min-width: 768px) {
-    .button-lightblue {
-    }
+    .button-lightblue {}
 }
 
 .button__green {
-    padding: .7rem 6.2rem;
+    padding: .99rem 7.1rem;
+    margin-top: .24rem;
     background-color: #5DD5AB;
 }
 
@@ -180,6 +200,48 @@ ul {
     }
 }
 
+/* カルーセルのスタイル */
+
+.slick-dots {
+    bottom: -1.5rem;
+    left:-.3rem;
+    display: flex;
+    column-gap: .2rem;
+    justify-content: center;
+}
+
+@media (min-width :768px) {
+    .slick-dots {
+        /* display: flex; */
+        /* justify-content: flex-end; */
+        /* padding-right: 1.2rem; */
+    }
+}
+
+
+.slick-dots li {
+    width: 1rem;
+    height: 1rem;
+    margin: 0;
+}
+
+@media (min-width: 768px) {
+    .slick-dots li {
+        /* top: 0.4rem; */
+    }
+}
+
+@media (min-width: 768px) {
+    .slick-slide {
+        /* max-width: 100%; */
+        /* position: absolute; */
+    }
+
+}
+
+.slick-dots li button:before {
+    font-size: 0.6rem;
+}
 
 /* header */
 
@@ -204,13 +266,178 @@ ul {
     position: relative;
 }
 
-.cover__image img{
-    top:0;
+.cover__image img {
+    top: 0;
     /* position: absolute; */
     /* object-position: top ; */
     object-fit: cover;
+    width: 100%;
+    height: 100%;
+
 
 }
+
+.cover__text {
+    max-width: 15.625rem;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    row-gap: .5rem;
+    transform: translate(9%, -22%);
+}
+
+.cover__maintext {
+    display: flex;
+    text-align: left;
+    flex-direction: column;
+    font-size: 2.5rem;
+    position: relative;
+    letter-spacing: 0.32em;
+}
+
+.cover__subtext {
+    font-size: 1.25rem;
+    white-space: nowrap;
+    letter-spacing: 0.3em;
+}
+
+
+/* about */
+.about {
+    position: relative;
+}
+
+.about__image {
+    position: relative;
+    width: 100%;
+    padding-bottom: 20rem;
+}
+
+.about__image img {
+    position: absolute;
+    object-fit: cover;
+    object-position: bottom;
+    width: 100%;
+    height: 100%;
+}
+
+.about__text {
+    max-width: 23rem;
+    position: relative;
+    padding-top: 2.5rem;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    line-height: 1.75;
+    letter-spacing: 0.03em;
+    color: #fff;
+}
+
+@media (min-width: 768px) {
+    .about__text {
+        margin: 0 auto;
+        max-width: 30rem;
+        text-align: left;
+        transform: translateX(60%);
+    }
+}
+
+.about__maintitle {
+    font-size: 1.875rem;
+    font-weight: bold;
+    letter-spacing: 0em;
+}
+
+.about__subtitle {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.about__content {
+    font-size: 0.875rem;
+    line-height: 2.28;
+    padding: 0 1rem 0 1rem;
+    padding-top: .7rem;
+}
+
+@media (min-width: 768px) {
+    .about__content {
+        padding: 0;
+    }
+}
+
+/* voices */
+
+.voices .container {
+    padding-top: 2rem;
+} 
+
+.voices__slider-wrapper {
+    position: relative;
+    max-width: 24.375rem;
+    margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+    .voices__slider-wrapper {
+        max-width: 75rem;
+    }
+}
+
+.voices__slick {
+    background-color: #C6F0FE;
+    margin: 2rem 3rem;
+    padding: 1rem 2rem 4rem 2rem;
+
+}
+
+
+.voices__slick-item {
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .voices__slick-item {
+        margin: 0 1rem;
+    }
+}
+
+.voices__slick-item picture img {
+    margin: 0 auto;
+    border-radius: 50%;
+}
+
+
+.voices__arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 5;
+    cursor: pointer;
+
+    /* アイコンをクリックしたい部分だけ */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+}
+
+.voices__arrow-prev {
+    left: 0;
+}
+
+.voices__arrow-next {
+    right: 0;
+}
+
+.voices__arrow i {
+    font-size: 32px;
+    /* アイコンの大きさ */
+    color: #00bcd4;
+    /* 好きな色 */
+}
+
 
 /* acordion */
 
@@ -220,7 +447,7 @@ ul {
 
 .question .container {
     /* padding-top: 4rem; */
-  padding-inline:1rem;
+    padding-inline: 1rem;
 }
 
 @media (min-width: 768px) {
@@ -231,34 +458,34 @@ ul {
 
 .question .section__title {
     /* position: relative; */
-  /* text-align: center; */
-  /* padding: 0; */
-  /* padding-top: 0.4rem; */
-  /* padding-right: 0.1rem; */
-  /* margin: 0; */
-  /* font-size: 1.51rem; */
+    /* text-align: center; */
+    /* padding: 0; */
+    /* padding-top: 0.4rem; */
+    /* padding-right: 0.1rem; */
+    /* margin: 0; */
+    /* font-size: 1.51rem; */
 }
 
 @media (min-width: 768px) {
     .question .section__title {
         /* letter-spacing: 0.025em; */
-    /* padding-top: 1.85rem; */
-    /* padding-bottom: 0.9rem; */
-    /* font-size: 2.2rem; */
+        /* padding-top: 1.85rem; */
+        /* padding-bottom: 0.9rem; */
+        /* font-size: 2.2rem; */
     }
 }
 
 .question__flex {
     /* padding-top: 2.5rem; */
-  display: flex;
-  flex-direction: column;
-  row-gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
 }
 
 @media (min-width: 768px) {
     .question__flex {
         /* padding-top: 2.25rem; */
-    /* row-gap: 1.25rem; */
+        /* row-gap: 1.25rem; */
     }
 }
 

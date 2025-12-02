@@ -1,14 +1,32 @@
 
 // slickの初期設定
-$('.cover__slick').slick({
+$('.voices__slick').slick({
     infinite: true,
     dots: true,
-    arrows: false,
-    fade: true,
+    arrows: true,
     autoplay: false,
     autoplaySpeed: 5000,
     speed: 600,
-    pauseOnHover: false
+    pauseOnHover: false,
+
+    // カスタム矢印の設定
+    prevArrow: $('.voices__arrow-prev'),
+    nextArrow: $('.voices__arrow-next'),
+
+    // PC（768px以上）のデフォルト設定
+    slidesToShow: 3,
+    slidesToScroll: 3,
+
+    responsive: [
+        {
+            // 768px 未満（スマホ）の設定
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+            }
+        }
+    ]
 });
 
 // アコーディオンのタイトルがクリックされたら
