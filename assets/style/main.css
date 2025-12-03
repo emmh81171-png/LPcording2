@@ -69,7 +69,9 @@ ul {
 
 .section__title {
     font-weight: bold;
+    font-size: 1.875rem;
     text-align: center;
+    letter-spacing:.05em;
     /* padding-top: 4rem; */
     /* padding-left: 1rem; */
     /* padding-bottom: 1.25rem; */
@@ -310,7 +312,7 @@ ul {
 .about__image {
     position: relative;
     width: 100%;
-    padding-bottom: 20rem;
+    padding-bottom: 17.3rem;
 }
 
 .about__image img {
@@ -324,6 +326,7 @@ ul {
 .about__text {
     max-width: 23rem;
     position: relative;
+    margin: 0 auto;
     padding-top: 2.5rem;
     display: flex;
     text-align: center;
@@ -356,9 +359,9 @@ ul {
 .about__content {
     font-size: 0.875rem;
     line-height: 2.28;
-    padding: 0 1rem 0 1rem;
+    padding: 0 .9rem 0 .5rem;
     padding-top: .7rem;
-}
+}}
 
 @media (min-width: 768px) {
     .about__content {
