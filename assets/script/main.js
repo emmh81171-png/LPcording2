@@ -1,7 +1,7 @@
 
 // slickの初期設定
 $('.voices__slick').slick({
-    infinite: true,
+    infinite: false,
     dots: true,
     arrows: true,
     autoplay: false,
